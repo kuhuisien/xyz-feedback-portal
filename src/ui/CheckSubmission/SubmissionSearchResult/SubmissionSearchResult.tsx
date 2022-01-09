@@ -11,6 +11,9 @@ import {
   SubmissionResultDisplayWrapper
 } from './SubmissionSearchResult.styles';
 
+const feedbackStatusDisplay = (feedbackStatus: string | null) =>
+  !feedbackStatus ? 'Pending' : feedbackStatus;
+
 const SubmissionSearchResult = () => {
   const isLoadingSearchResult = useAppSelector(checkSubmissionLoading);
   const searchResult = useAppSelector(checkSubmissionData);
@@ -31,7 +34,7 @@ const SubmissionSearchResult = () => {
           {`Submitted at ${formatDate(record.createdAt)}`}
 
           <br />
-          {record.processingResult}
+          {`${feedbackStatusDisplay(record.processingResult)}`}
         </React.Fragment>
       ),
       responsive: ['xs' as Breakpoint]
@@ -60,6 +63,7 @@ const SubmissionSearchResult = () => {
     {
       title: 'Processing Result',
       dataIndex: 'processingResult',
+      render: (processingResult: string | null) => feedbackStatusDisplay(processingResult),
       responsive: ['sm' as Breakpoint]
     }
   ];
