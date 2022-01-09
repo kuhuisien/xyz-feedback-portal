@@ -31,21 +31,18 @@ export const ROUTES: Route[] = [
   {
     path: PATHS.ROOT.path,
     exact: true,
-    component: <Home />,
-    title: 'Home'
+    component: <Home />
   },
 
   {
-    path: PATHS.ADD_SUBMISSION.path,
+    path: PATHS.SUBMIT_FEEDBACK.path,
     exact: true,
-    component: <SubmitFeedback />,
-    title: 'Submit Feedback'
+    component: <SubmitFeedback />
   },
 
   {
     path: PATHS.CHECK_SUBMISSION.path,
     exact: true,
-    component: <CheckSubmission />,
-    title: 'Check submission'
+    component: <CheckSubmission />
   }
 ];

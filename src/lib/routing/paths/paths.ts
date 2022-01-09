@@ -1,6 +1,6 @@
 import { AppPaths } from './paths.type';
 
-const ADD_SUBMISSION_PATH = '/addSubmission';
+const SUBMIT_FEEDBACK_PATH = '/submitFeedback';
 const CHECK_SUBMISSION_PATH = '/checkSubmission';
 
 /**
@@ -15,9 +15,9 @@ export const PATHS: AppPaths = {
     displayTitle: 'Home'
   },
 
-  ADD_SUBMISSION: {
-    path: ADD_SUBMISSION_PATH,
-    displayTitle: 'Add Submission'
+  SUBMIT_FEEDBACK: {
+    path: SUBMIT_FEEDBACK_PATH,
+    displayTitle: 'Submit Feedback'
   },
 
   CHECK_SUBMISSION: {
