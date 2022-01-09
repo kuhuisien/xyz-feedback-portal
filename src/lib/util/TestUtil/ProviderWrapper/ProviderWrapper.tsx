@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'antd';
+import Form from 'antd/lib/form';
 
 interface FormWrapperProps {
   children: React.ReactNode;

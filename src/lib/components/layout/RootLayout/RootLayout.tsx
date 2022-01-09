@@ -1,5 +1,4 @@
 import React from 'react';
-import { Layout } from 'antd';
 import { IRootLayoutProps } from './RootLayout.types';
 import AppHeader from '../AppHeader/AppHeader';
 import AppTitle from '../AppTitle/AppTitle';

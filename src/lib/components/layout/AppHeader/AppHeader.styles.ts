@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Avatar } from 'antd/lib';
+import Avatar from 'antd/lib/avatar';
 import { Header } from 'antd/lib/layout/layout';
 
 const HeaderContainer = styled(Header)`

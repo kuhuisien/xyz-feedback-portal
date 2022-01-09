@@ -2,10 +2,10 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
+import Table from 'antd/lib/table';
 import SubmissionSearchResult from '../SubmissionSearchResult';
 import { initialState } from 'ui/CheckSubmission/store/initialState';
 import { ICheckSubmissionState } from 'ui/CheckSubmission/store/checkSubmission.types';
-import { Table } from 'antd';
 import { MOCK_CHECK_SUBMISSION_RESPONSE } from 'api/checkSubmission/__test__/checkSubmission.mock';
 
 describe('SubmissionSearchResult', () => {

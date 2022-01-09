@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { Form, Input } from 'antd';
-import { Rule } from 'antd/lib/form';
+import Form, { Rule } from 'antd/lib/form';
+import Input from 'antd/lib/input';
 import { ITextFieldProps } from './TextField.types';
 import { TextFieldContainer } from './TextField.styles';
 

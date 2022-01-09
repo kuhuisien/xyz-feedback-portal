@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { Form, Input } from 'antd';
-import { Rule } from 'antd/lib/form';
+import Form, { Rule } from 'antd/lib/form';
+import Input from 'antd/lib/input';
 import { TextareaProps } from './Textarea.types';
 import { TextAreaContainer } from './TextArea.styles';
 

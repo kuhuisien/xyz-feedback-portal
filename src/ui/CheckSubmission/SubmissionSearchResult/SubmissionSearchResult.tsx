@@ -1,9 +1,9 @@
-import { Spin, Table } from 'antd';
+import React from 'react';
+import Table from 'antd/lib/table';
 import { Breakpoint } from 'antd/lib/_util/responsiveObserve';
 import { IFeedback } from 'api/checkSubmission/checkSubmission.fromApi.types';
 import { useAppSelector } from 'lib/redux/hooks';
 import { formatDate } from 'lib/util/DateTimeUtil/formatDate/formatDate';
-import React from 'react';
 import { checkSubmissionData, checkSubmissionLoading } from '../store/selector';
 import {
   SearchResultTitle,

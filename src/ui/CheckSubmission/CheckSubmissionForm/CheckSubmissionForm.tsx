@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form } from 'antd';
+import Form from 'antd/lib/form';
 import SimpleButton from 'lib/components/buttons/SimpleButton/SimpleButton';
 import SubmitButton from 'lib/components/buttons/SubmitButton/SubmitButton';
 import TextField from 'lib/components/formInputs/TextField/TextField';

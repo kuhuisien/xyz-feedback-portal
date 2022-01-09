@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Form } from 'antd';
+import Form from 'antd/lib/form';
+import { PATHS } from 'lib/routing/paths/paths';
+import { useErrorHandler } from 'react-error-boundary';
 import SimpleButton from 'lib/components/buttons/SimpleButton/SimpleButton';
 import SubmitButton from 'lib/components/buttons/SubmitButton/SubmitButton';
 import Textarea from 'lib/components/formInputs/TextArea/Textarea';
@@ -10,8 +12,6 @@ import { formFieldNames } from './formFieldNames';
 import { useAsync } from 'lib/hooks/useAsync';
 import { submitFeedback } from 'api/submitFeedback/submitFeedback';
 import { ISubmitFeedBackPayload } from 'api/submitFeedback/submitFeedback.toApi.types';
-import { PATHS } from 'lib/routing/paths/paths';
-import { useErrorHandler } from 'react-error-boundary';
 
 const SubmitFeedback = () => {
   const navigate = useNavigate();
