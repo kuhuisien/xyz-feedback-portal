@@ -1,9 +1,23 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { shallow, ShallowWrapper } from 'enzyme';
 import App from './App';
+import RootLayout from 'lib/components/layout/RootLayout/RootLayout';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  let wrapper: ShallowWrapper;
+
+  function renderApp() {
+    return shallow(<App />);
+  }
+
+  beforeEach(() => {
+    wrapper = renderApp();
+  });
+
+  // ====================
+  // RootLayout
+  // ====================
+  it('should render RootLayout correctly', () => {
+    expect(wrapper.find(RootLayout).length).toBe(1);
+  });
 });
