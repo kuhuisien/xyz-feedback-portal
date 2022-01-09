@@ -9,7 +9,7 @@ const ACTION_CARD_LIST: IHomeCardProps[] = [
   {
     title: 'Submit Feedback',
     info: 'Fill in the form to submit feedback.',
-    path: PATHS.ADD_SUBMISSION.path,
+    path: PATHS.SUBMIT_FEEDBACK.path,
     code: 'AS'
   },
   {
