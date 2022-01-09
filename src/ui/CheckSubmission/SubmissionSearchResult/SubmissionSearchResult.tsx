@@ -11,6 +11,13 @@ import {
   SubmissionResultDisplayWrapper
 } from './SubmissionSearchResult.styles';
 
+/**
+ * To render user-friendly display text for feedback submission status
+ * Display 'Pending' if the submission has not been processed
+ * Else, display the submission feedback status
+ *
+ * @param feedbackStatus
+ */
 const feedbackStatusDisplay = (feedbackStatus: string | null) =>
   !feedbackStatus ? 'Pending' : feedbackStatus;
 
