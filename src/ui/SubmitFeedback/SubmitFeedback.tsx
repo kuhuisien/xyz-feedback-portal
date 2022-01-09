@@ -22,10 +22,12 @@ const SubmitFeedback = () => {
 
   const [feedbackSubmissionForm] = Form.useForm();
 
+  // event trigered when 'Cancel' button is clicked
   const onCancelButtonClick = () => {
     navigate(-1);
   };
 
+  // event triggered when 'Submit' button is clicked and inputs are verified
   const onSubmitButtonClick = async (values: any) => {
     await execute({
       name: values[formFieldNames.name],
@@ -37,9 +39,12 @@ const SubmitFeedback = () => {
   };
 
   useEffect(() => {
+    // redirect to homepage if submission is successful
     if (status === 'success') {
       navigate(PATHS.ROOT.path);
-    } else if (status === 'error' && error) {
+    }
+    // error handling for failed submission
+    else if (status === 'error' && error) {
       handleError(new Error(error));
     }
   }, [status, error]);

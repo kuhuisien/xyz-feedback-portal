@@ -6,8 +6,8 @@ const CHECK_SUBMISSION_PATH = '/checkSubmission';
 /**
  * === APP PATHS ===
  *
- * Top level application routes leading to specific modules.
- * e.g. Home page, Task module ...
+ * Top level application routes leading to specific pages.
+ * e.g. Home page, Submit Feedback page ...
  */
 export const PATHS: AppPaths = {
   ROOT: {

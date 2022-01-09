@@ -2,7 +2,7 @@ export interface ITextFieldProps {
   // name of the state, used specifically by antd for data binding
   name: string;
 
-  // whether the field is required, default value is 'false'
+  // whether the field is required, default value is false
   required?: boolean;
 
   // customized validation message to be displayed when the field is required and value is falsy, if not provided, display as "Required"
@@ -15,7 +15,7 @@ export interface ITextFieldProps {
   // if not provided, display as : 'Invalid'
   patternValMsg?: string;
 
-  // label to be displayed on top of the textfield
+  // label to be displayed on top of the textfield, default value is 255
   label?: string;
 
   // placeholder of the textfield
@@ -27,6 +27,6 @@ export interface ITextFieldProps {
   // type of textfield, default value is 'text'
   type?: 'text' | 'email' | 'number';
 
-  // width of dropdown in rem unit, default is 15
+  // width of dropdown in rem unit or percentage, default is 17rem
   width?: number | string;
 }

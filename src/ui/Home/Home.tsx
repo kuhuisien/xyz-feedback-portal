@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { IHomeCardProps } from './Home.types';
 import { PATHS } from 'lib/routing/paths/paths';
 
+// Card Display Configuration on Homepage
 const ACTION_CARD_LIST: IHomeCardProps[] = [
   {
     title: 'Submit Feedback',
@@ -23,6 +24,7 @@ const ACTION_CARD_LIST: IHomeCardProps[] = [
 const Home = () => {
   const navigate = useNavigate();
 
+  // event triggered when card is clicked on
   const onClickActionCard = (path: string) => {
     navigate(path);
   };

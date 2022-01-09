@@ -4,8 +4,6 @@ import { parseISO } from 'date-fns';
  * Obtains the converted Date object from a datetime formatted in ISO
  * e.g. "2020-04-08T15:27:41.987Z" or "2020-04-08T15:27:41"
  *
- * The consumer of this function is the one that handles invalid datetime values.
- *
  * @param {string | null} isoDateString  A date string in ISO format
  *
  * @returns {Date | null}  The converted Date object or NULL if the provided Date input could not be parsed.

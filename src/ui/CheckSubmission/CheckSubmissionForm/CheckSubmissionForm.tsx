@@ -23,12 +23,17 @@ const CheckSubmissionForm = ({ onFormSubmit }: ICheckSubmissionFormProps) => {
 
   const [checkSubmissionForm] = Form.useForm();
 
+  // event trigered when 'Cancel' button is clicked
   const onCancelButtonClick = () => {
     navigate(-1);
   };
 
+  // event triggered when 'Submit' button is clicked and inputs are verified
   const onSubmitButtonClick = (values: any) => {
+    // trigger API call for submission
     dispatch(checkSubmission(values[formFieldNames.contactNumber], values[formFieldNames.email]));
+
+    // trigger form submission callback
     onFormSubmit();
   };
 

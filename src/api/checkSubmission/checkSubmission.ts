@@ -21,10 +21,9 @@ const checkFeedback = async (
     return parseResponse(response, CHECK_FEEDBACK_URL);
   } catch (error) {
     const defaultMsg = formatCheckSubmissionErrorMessage(CHECK_FEEDBACK_URL);
-    //const errorMsg = parseError(error, defaultMsg);
-    //console.log(errorMsg + 'test');
-    console.error(defaultMsg);
-    throw new Error(defaultMsg);
+    const errorMsg = parseError(error, defaultMsg);
+    console.error(errorMsg);
+    throw new Error(errorMsg);
   }
 };
 
