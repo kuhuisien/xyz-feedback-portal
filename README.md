@@ -3,27 +3,27 @@
 This project allows user to submit feedback and check feedback submission status.
 
 Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Built with TypeScript + ReactJS + Redux
+Built with TypeScript + ReactJS + Redux.
 
-Visit the deployed app [here](https://xyz-ffedback-portal.herokuapp.com/)
+Visit the deployed app [here](https://xyz-ffedback-portal.herokuapp.com/).
 
 ## Getting Started
 
 ### Installing
 
-1. Clone this repo
+1. Clone this repo.
 
 ```
 git clone https://github.com/kuhuisien/xyz-feedback-portal
 ```
 
-2. Navigate to the project directory
+2. Navigate to the project directory.
 
 ```bash
 cd xyz-feedback-portal
 ```
 
-3. Install dependencies
+3. Install dependencies.
 
 ```bash
 npm install
@@ -40,26 +40,20 @@ You will also see any lint errors in the console.
 npm start
 ```
 
-### Building
+### Deploying
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-
-```bash
-npm install
-```
+The project is deployed via Heroku.
+It has been configured to do automatically deployment from master branch.
 
 ### Testing
 
-Launch `jest`, our test runner in interactive watch mode.
+Test runner is in interactive watch mode.
 
 ```bash
 npm test
 ```
 
-Launch `jest`, with test coverage reporting. Your jest test coverage report will be generated at `./coverage`, and you can open the `index.html` webpage there to take a look at your coverage stats.
+Launch `jest`, with test coverage reporting. Test coverage report will be generated at `./coverage`, and you can open the `index.html` webpage there to take a look at the coverage stats.
 
 ```bash
 npm run test:coverage

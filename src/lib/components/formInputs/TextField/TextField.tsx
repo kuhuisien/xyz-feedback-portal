@@ -19,7 +19,6 @@ const TextField = ({
   // create validation rules
 
   const createRules = () => {
-    // eslint-disable-next-line prefer-const
     let rules: Rule[] = [];
     let message: string | undefined = undefined;
     if (required) {

@@ -16,6 +16,6 @@ export interface SimpleButtonProps {
   // whether button is disabled
   disabled?: boolean;
 
-  // action to trigger when button is clicked
+  // event to trigger when button is clicked
   onClick?: (event: React.MouseEvent<HTMLElement, MouseEvent>) => void;
 }

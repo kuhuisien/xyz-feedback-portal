@@ -8,17 +8,16 @@ const { TextArea } = Input;
 
 const Textarea = ({
   name,
+  required = false,
+  requiredValMsg = 'Required',
   label,
   placeholder,
   rows,
   width = 17,
-  maxLength = 255,
-  required = false,
-  requiredValMsg = 'Required'
+  maxLength = 255
 }: TextareaProps) => {
   // create validation rules
   const createRules = () => {
-    // eslint-disable-next-line prefer-const
     let rules: Rule[] = [];
     let message: string | undefined = undefined;
     if (required) {
