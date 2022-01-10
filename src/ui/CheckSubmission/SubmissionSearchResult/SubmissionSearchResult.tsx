@@ -95,7 +95,7 @@ const SubmissionSearchResult = () => {
         />
       </SubmissionResultDisplay>
 
-      {<SearchError>{errMsgSearchResult}</SearchError>}
+      {errMsgSearchResult && <SearchError>{errMsgSearchResult}</SearchError>}
     </SubmissionResultDisplayWrapper>
   );
 };

@@ -7,6 +7,7 @@ import { MOCK_CHECK_SUBMISSION_RESPONSE } from 'api/checkSubmission/__test__/che
 import { initialState } from 'ui/CheckSubmission/store/initialState';
 import { ICheckSubmissionState } from 'ui/CheckSubmission/store/checkSubmission.types';
 import SubmissionSearchResult from '../SubmissionSearchResult';
+import { SearchError } from '../SubmissionSearchResult.styles';
 
 describe('SubmissionSearchResult', () => {
   let wrapper: ReactWrapper;
@@ -41,5 +42,16 @@ describe('SubmissionSearchResult', () => {
     expect(wrapper.find(Table).props().loading).toBe(false);
 
     expect(wrapper.find(Table).props().dataSource).toBe(MOCK_CHECK_SUBMISSION_RESPONSE);
+  });
+
+  it('should not display error message when it is falsy', () => {
+    expect(wrapper.find(SearchError).length).toBe(0);
+  });
+
+  it('should display error message when it is existing', () => {
+    const MOCK_ERR_MSG = 'search error occured';
+    wrapper = renderSubmissionSearchResult({ ...initialState, errorMsg: MOCK_ERR_MSG });
+
+    expect(wrapper.find(SearchError).text()).toBe(MOCK_ERR_MSG);
   });
 });
