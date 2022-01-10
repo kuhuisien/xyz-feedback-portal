@@ -1,20 +1,19 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
+import SimpleButton from 'lib/components/buttons/SimpleButton/SimpleButton';
 import ErrorFallback from '../ErrorFallBack';
 import { IErrorFallbackProps } from '../ErrorFallBack.type';
-import SimpleButton from 'lib/components/buttons/SimpleButton/SimpleButton';
 import { ErrorMsgDetail } from '../ErrorFallBack.style';
 
 describe('ErrorFallBack', () => {
   let wrapper: ReactWrapper;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+
   let resetErrorBoundaryHandler: jest.Mock<any, any>;
 
   let defaultProps: IErrorFallbackProps;
 
   const MOCK_ERROR = new Error('mock error');
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function renderErrorFallBack(args: any) {
     resetErrorBoundaryHandler = jest.fn();
 

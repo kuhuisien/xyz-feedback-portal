@@ -22,4 +22,11 @@ const SearchResultTitle = styled(Text)`
   font-weight: 600;
 `;
 
-export { SubmissionResultDisplayWrapper, SubmissionResultDisplay, SearchResultTitle };
+const SearchError = styled(Text)`
+  font-weight: 600;
+  color: red;
+  margin-top: 0.3rem;
+  text-align: center;
+`;
+
+export { SubmissionResultDisplayWrapper, SubmissionResultDisplay, SearchResultTitle, SearchError };

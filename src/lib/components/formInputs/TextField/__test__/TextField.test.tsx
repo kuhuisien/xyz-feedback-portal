@@ -49,14 +49,13 @@ describe('TextField', () => {
     }
   });
 
-  it('should map required prop correctly with requiredValMsg prop', () => {
+  it('should map required prop correctly with default validation message when required=true && requiredValMsg is undefined', () => {
     const required = true;
-    const requiredValMsg = 'customized validation message';
-    wrapper = renderTextField({ required, requiredValMsg });
+    wrapper = renderTextField({ required });
     const rule = wrapper.find(Form.Item).props().rules;
     if (rule && rule.length > 0) {
       expect(rule[0]).toEqual({
-        message: requiredValMsg,
+        message: `Required`,
         required,
         whitespace: true
       });
@@ -65,13 +64,14 @@ describe('TextField', () => {
     }
   });
 
-  it('should map required prop correctly with default validation message when requiredValMsg is undefined', () => {
+  it('should map required prop correctly with requiredValMsg prop', () => {
     const required = true;
-    wrapper = renderTextField({ required });
+    const requiredValMsg = 'customized validation message';
+    wrapper = renderTextField({ required, requiredValMsg });
     const rule = wrapper.find(Form.Item).props().rules;
     if (rule && rule.length > 0) {
       expect(rule[0]).toEqual({
-        message: `Required`,
+        message: requiredValMsg,
         required,
         whitespace: true
       });

@@ -18,7 +18,7 @@ describe('SubmitButton', () => {
     const props = { ...defaultProps, ...args };
     return mount(
       <FormProviderWrapper>
-        <SubmitButton disabled={props.disabled} {...props} />
+        <SubmitButton {...props} />
       </FormProviderWrapper>
     );
   }
@@ -48,8 +48,14 @@ describe('SubmitButton', () => {
     expect(wrapper.find(Button).props().loading).toBe(loading);
   });
 
-  it('should disable button correctly when form fields are untouched', () => {
+  it('should map default disabled prop correctly', () => {
     expect(wrapper.find(Button).props().disabled).toBe(false);
+  });
+
+  it('should map disabled prop correctly', () => {
+    const disabled = true;
+    wrapper = renderSubmitButton({ disabled });
+    expect(wrapper.find(Button).props().disabled).toBe(disabled);
   });
 
   // ====================

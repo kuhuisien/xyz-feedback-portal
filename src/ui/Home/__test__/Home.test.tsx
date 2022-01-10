@@ -21,7 +21,7 @@ describe('Home', () => {
     expect(wrapper.find(ActionCard).length).toBe(2);
   });
 
-  it('should not trigger error for Action Card clicking', () => {
+  it('should not trigger error upon Action Card clicking', () => {
     const actionCardNum = wrapper.find(ActionCard).length;
 
     for (let i = 0; i < actionCardNum; i++) {

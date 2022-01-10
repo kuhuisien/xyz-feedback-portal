@@ -4,8 +4,13 @@ import { Breakpoint } from 'antd/lib/_util/responsiveObserve';
 import { IFeedback } from 'api/checkSubmission/checkSubmission.fromApi.types';
 import { useAppSelector } from 'lib/redux/hooks';
 import { formatDate } from 'lib/util/DateTimeUtil/formatDate/formatDate';
-import { checkSubmissionData, checkSubmissionLoading } from '../store/selector';
 import {
+  checkSubmissionData,
+  checkSubmissionLoading,
+  checkSubmissionErrMsg
+} from '../store/selector';
+import {
+  SearchError,
   SearchResultTitle,
   SubmissionResultDisplay,
   SubmissionResultDisplayWrapper
@@ -23,6 +28,7 @@ const feedbackStatusDisplay = (feedbackStatus: string | null) =>
 
 const SubmissionSearchResult = () => {
   const isLoadingSearchResult = useAppSelector(checkSubmissionLoading);
+  const errMsgSearchResult = useAppSelector(checkSubmissionErrMsg);
   const searchResult = useAppSelector(checkSubmissionData);
 
   // Column Display Configuration
@@ -88,6 +94,8 @@ const SubmissionSearchResult = () => {
           rowKey="id" // To resolve 'Each child in a list should have a unique "key" prop'
         />
       </SubmissionResultDisplay>
+
+      {<SearchError>{errMsgSearchResult}</SearchError>}
     </SubmissionResultDisplayWrapper>
   );
 };

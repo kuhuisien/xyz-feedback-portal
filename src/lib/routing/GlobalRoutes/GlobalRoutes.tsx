@@ -15,15 +15,9 @@ import SubmitFeedback from 'ui/SubmitFeedback/SubmitFeedback';
  * Define routes in the below setup by:
  *   - Specifying the path in the browser that, when navigated to, will render its
  *     corresponding component.
- *   - Function that returns the React component to be rendered, preferably a component
+ *   - Specifying the React component to be rendered, preferably a component
  *     that represents the page (top-level entry point) of the functionality.
  *
- * == FOR FUTURE DEVELOPMENT ==
- *
- * Note:
- *   The flat and long hierarchy of this routing setup may not scale when we need
- *   to manage many routes for every module. Hence, do feel free to modify the shape
- *   of this schema (e.g. add sub nodes / combine nested objects) to suit that scale.
  */
 
 export const ROUTES: Route[] = [

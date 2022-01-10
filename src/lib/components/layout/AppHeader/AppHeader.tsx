@@ -1,6 +1,6 @@
 import React from 'react';
-import { PATHS } from 'lib/routing/paths/paths';
 import { Link } from 'react-router-dom';
+import { PATHS } from 'lib/routing/paths/paths';
 import { AvatarContainer, HeaderContainer } from './AppHeader.styles';
 
 const AppHeader = () => {

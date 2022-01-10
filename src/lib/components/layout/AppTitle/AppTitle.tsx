@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import { PATHS } from 'lib/routing/paths/paths';
 import { useLocation } from 'react-router-dom';
+import { PATHS } from 'lib/routing/paths/paths';
 import { PageTitleContainer, PageTitleText } from './AppTitle.styles';
 
 export interface PathNameToDisplayTitleMapping {

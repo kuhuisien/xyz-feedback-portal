@@ -1,10 +1,6 @@
 // ==========================
 // URLs Resource
-//
 // Contains the URLs to specific API endpoints.
-//
-// Depending on the environment this application is built from, the
-// appropriate URLs are resolved into environment-specific configurations.
 // ==========================
 
 // Base URL for APIs

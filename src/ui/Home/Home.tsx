@@ -1,9 +1,9 @@
 import React from 'react';
-import { HomeBodyContainer } from './Home.styles';
-import ActionCard from './ActionCard/ActionCard';
 import { useNavigate } from 'react-router-dom';
-import { IHomeCardProps } from './Home.types';
 import { PATHS } from 'lib/routing/paths/paths';
+import { HomeBodyContainer } from './Home.styles';
+import { IHomeCardProps } from './Home.types';
+import ActionCard from './ActionCard/ActionCard';
 
 // Card Display Configuration on Homepage
 const ACTION_CARD_LIST: IHomeCardProps[] = [

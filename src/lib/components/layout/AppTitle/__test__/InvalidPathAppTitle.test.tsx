@@ -4,6 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import AppTitle from '../AppTitle';
 import { PageTitleText } from '../AppTitle.styles';
 
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useLocation: () => ({
+    pathname: 'localhost:3000/example/path'
+  })
+}));
+
 describe('AppTitle', () => {
   let wrapper: ReactWrapper;
 
@@ -23,7 +30,8 @@ describe('AppTitle', () => {
   // Link
   // ====================
   it('should render title text correctly', () => {
-    // useLocation is mocked in this unit test to return root path
-    expect(wrapper.find(PageTitleText).text()).toBe('Home');
+    // useLocation is mocked in this unit test to return unknown path
+    // component should still render without error
+    expect(wrapper.find(PageTitleText).text()).toBe('');
   });
 });

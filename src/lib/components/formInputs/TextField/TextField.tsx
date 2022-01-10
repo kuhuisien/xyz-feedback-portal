@@ -17,7 +17,6 @@ const TextField = ({
   width = 17
 }: ITextFieldProps) => {
   // create validation rules
-
   const createRules = () => {
     let rules: Rule[] = [];
     let message: string | undefined = undefined;

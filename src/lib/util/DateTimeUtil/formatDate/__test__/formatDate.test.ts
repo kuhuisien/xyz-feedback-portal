@@ -15,15 +15,15 @@ describe('Date Utility formatDate', () => {
     );
   });
 
-  it("should return empty string '' if date string input is null", () => {
+  it('should return empty string if date string input is null', () => {
     expect(formatDate(null)).toEqual('');
   });
 
-  it("should return empty string '' if date string input is undefined", () => {
+  it('should return empty string if date string input is undefined', () => {
     expect(formatDate(undefined as any)).toEqual('');
   });
 
-  it('should throw an error if date string is not in ISO format', () => {
+  it('should return empty string if date string is not in ISO format', () => {
     expect(formatDate('not a date')).toEqual('');
   });
 });

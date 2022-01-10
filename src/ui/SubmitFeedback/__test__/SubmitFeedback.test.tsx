@@ -42,9 +42,6 @@ describe('SubmitFeedback', () => {
   // ==============
   // SUBMIT BUTTON
   // ==============
-  it('should have correct default text rendered on "Submit" button', () => {
-    expect(wrapper.find(SimpleButton).at(1).props().children).toBe('Submit');
-  });
 
   it('should have correct text rendered on "Submit" button before form submission', () => {
     expect(wrapper.find(SubmitButton).props().children).toBe('Submit');
@@ -68,10 +65,6 @@ describe('SubmitFeedback', () => {
     wrapper = renderSubmitFeedback();
 
     expect(wrapper.find(SubmitButton).props().children).toBe('Submit');
-  });
-
-  it('should have correct default text rendered on "Submit" button', () => {
-    expect(wrapper.find(SimpleButton).at(1).props().children).toBe('Submit');
   });
 
   it('should not disable "Submit" button before form submission', () => {
@@ -101,7 +94,7 @@ describe('SubmitFeedback', () => {
   // ==============
   // ERROR HANDLING
   // ==============
-  it('should have correct text rendered on "Submit" button after failed form submisison', () => {
+  it('should throw error after failed form submisison, to be handled by react-error-boundary', () => {
     const MOCK_ERROR_MSG = 'error returned from useAsync';
     mockLocationsSpy = jest.spyOn(useAsyncModule, 'useAsync').mockReturnValue({
       execute: jest.fn(),

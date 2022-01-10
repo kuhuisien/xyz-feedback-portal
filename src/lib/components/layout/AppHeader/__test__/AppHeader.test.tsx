@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
-import AppHeader from '../AppHeader';
 import { Link } from 'react-router-dom';
+import AppHeader from '../AppHeader';
 
 describe('AppHeader', () => {
   let wrapper: ShallowWrapper;

@@ -18,6 +18,7 @@ const SubmitFeedback = () => {
 
   const handleError = useErrorHandler();
 
+  // set useAsync's 'immediate' as false so that API call is not triggered on load
   const { execute, status, error } = useAsync(submitFeedback, false);
 
   const [feedbackSubmissionForm] = Form.useForm();

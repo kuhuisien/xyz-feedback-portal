@@ -7,10 +7,10 @@ const DATE_FORMAT_FOR_DISPLAY = "E, dd MMMM yyyy, h:mmaaaaa'm'";
 /**
  * Formats an ISO date to a displayble format on the UI
  *
- * @param dateString  ISO DateTime format, e.g. "2022-01-09T15:45:00"
+ * @param dateString  ISO DateTime format, e.g. "2020-04-14T15:45:00"
  * @param dateFormat  Optional Date format string
  *
- * @returns Formatted date string, ready to be displayed on UI, e.g. "09 Jan 2022, 3:45 PM"
+ * @returns Formatted date string, ready to be displayed on UI, e.g. "14 April 2020, 3:45 PM"
  */
 export const formatDate = (dateString: string | null, dateFormat?: string) => {
   if (!dateString) {

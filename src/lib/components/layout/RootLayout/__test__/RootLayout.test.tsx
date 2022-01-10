@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
-import RootLayout from '../RootLayout';
 import { BrowserRouter } from 'react-router-dom';
-import AppHeader from '../../AppHeader/AppHeader';
+import { ErrorBoundary } from 'react-error-boundary';
+import RootLayout from '../RootLayout';
 
 describe('RootLayout', () => {
   let wrapper: ReactWrapper;
@@ -26,5 +26,12 @@ describe('RootLayout', () => {
   // ====================
   it('should render child props correctly', () => {
     expect(wrapper.find(`.${MOCK_CLASSNAME}`).length).toBe(1);
+  });
+
+  // ====================
+  // ErrorBoundary
+  // ====================
+  it('should render ErrorBoundary correctly', () => {
+    expect(wrapper.find(ErrorBoundary).length).toBe(1);
   });
 });
