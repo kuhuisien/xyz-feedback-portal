@@ -8,7 +8,7 @@ const AppHeader = () => {
     <HeaderContainer>
       <AvatarContainer>XYZ</AvatarContainer>
       <Link to={PATHS.ROOT.path}>
-        <div>Feedback Portal for XYZ</div>
+        <div>Company XYZ Pte Ltd Feedback Portal</div>
       </Link>
     </HeaderContainer>
   );
