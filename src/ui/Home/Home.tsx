@@ -8,7 +8,7 @@ import { PATHS } from 'lib/routing/paths/paths';
 // Card Display Configuration on Homepage
 const ACTION_CARD_LIST: IHomeCardProps[] = [
   {
-    title: 'Submit Feedback1',
+    title: 'Submit Feedback',
     info: 'Fill in the form to submit feedback.',
     path: PATHS.SUBMIT_FEEDBACK.path,
     code: 'AS'
