@@ -40,7 +40,7 @@ const TextField = ({
     if (type == 'email') {
       rules.push({
         type,
-        message: 'Invalid email'
+        message: 'Invalid'
       });
     }
 

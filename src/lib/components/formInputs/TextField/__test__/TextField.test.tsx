@@ -123,7 +123,7 @@ describe('TextField', () => {
     if (rule && rule.length > 0) {
       expect(rule[0]).toEqual({
         type,
-        message: 'Invalid email'
+        message: 'Invalid'
       });
     } else {
       fail('pattern rule was found not set correctly');
